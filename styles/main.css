@@ -1,0 +1,324 @@
+@font-face {
+    font-family: Orbitron;
+    src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #979797;
+}
+
+/* styling of main contents */
+
+header {
+    background-color: #4b4b4b;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.dash {
+    color: white;
+    font-family: Orbitron;
+}
+
+span {
+    color: black;
+    font-family: Orbitron;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#clockWork {
+    color: black;
+    font-family: Orbitron;
+    background-color: #f8f8f87e;
+    margin-bottom: 10px;
+    order: 1;
+    text-align: center;
+}
+
+#timeDay {
+    margin-bottom: 10px;
+    order: 2;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    order: 3;
+}
+
+
+button {
+    background-color: #f8f8f87e;
+    margin-left: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+#city1 {
+    order: 3;
+}
+
+#city2 {
+    order: 4;
+}
+
+#city3 {
+    order: 5;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+   
+    .dash {
+        font-size: 1.5em;
+        padding: 2px;
+    }
+
+    span {
+        font-size: 1.25em;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    #clockWork {
+        font-size: 3em;
+        width: 400px;
+        height: 210px;
+        line-height: 210px;
+    }
+
+    #timeDay {
+        width: 400px;
+        height: 210px;
+        background-image: url("../images/400x210.png");
+        background-repeat: no-repeat;
+    }
+
+    img {
+        margin-top: 160px;
+        margin-left: 175px;
+    }
+
+    button {
+        font-size: 2em;
+        width: 400px;
+        height: 210px;
+        margin-bottom: 10px;
+    }
+
+
+    .day {
+        animation-name: dayfly;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes dayfly {
+        25% {margin-top: 100px; transition: rotate(-90deg);}
+        50% {margin-left: 75px;}
+        75% {transition: rotate(90deg); margin-left: 75px;}
+        100% {margin-top: 160px; margin-left: 75px;}
+    }
+    
+    .night {
+        animation-name: nightfly;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes nightfly {
+        25% {margin-top: 100px; transition: rotate(90deg);}
+        50% {margin-left: 275px;}
+        75% {transition: rotate(-90deg); margin-left: 275px;}
+        100% {margin-top: 160px; margin-left: 275px;}
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    
+    .dash {
+        font-size: 2em;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    span {
+        font-size: 1.5em;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    #clockWork {
+        font-size: 3.5em;
+        width: 400px;
+        height: 210px;
+        line-height: 210px;
+    }
+
+    #timeDay {
+        width: 400px;
+        height: 210px;
+        background-image: url("../images/400x210.png");
+        background-repeat: no-repeat;
+    }
+
+    img {
+        margin-top: 160px;
+        margin-left: 175px;
+    }
+
+    button {
+        font-size: 2.5em;
+        width: 400px;
+        height: 210px;
+        margin-bottom: 10px;
+    }
+    .day {
+        animation-name: dayfly;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes dayfly {
+        25% {margin-top: 100px; transition: rotate(-90deg);}
+        50% {margin-left: 75px;}
+        75% {transition: rotate(90deg); margin-left: 75px;}
+        100% {margin-top: 160px; margin-left: 75px;}
+    }
+    
+    .night {
+        animation-name: nightfly;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes nightfly {
+        25% {margin-top: 100px; transition: rotate(90deg);}
+        50% {margin-left: 275px;}
+        75% {transition: rotate(-90deg); margin-left: 275px;}
+        100% {margin-top: 160px; margin-left: 275px;}
+    }
+    
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .dash {
+        font-size: 2em;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    span {
+        font-size: 1.5em;
+    }
+
+    section {
+        flex-direction: row;
+    }
+
+    #clockWork {
+        font-size: 4em;
+        width: 495px;
+        height: 300px;
+        margin-right: 10px;
+        line-height: 300px;
+        flex: 50%;
+        
+    }
+
+    #timeDay {
+        width: 495px;
+        height: 300px;
+        flex: 45%;
+        background-image: url("../images/700x300.png");
+        background-repeat: no-repeat;
+    }
+
+    img {
+        margin-top: 250px;
+        margin-left: 325px;
+    }
+
+
+    button {
+        font-size: 3em;
+        width: 500px;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    #city1 {
+        flex: 30%;
+    }
+
+    #city2 {
+        flex: 30%;
+    }
+
+    #city3 {
+        flex: 30%;
+    }
+
+    .day {
+        animation-name: dayfly;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        
+        animation-timing-function: ease;
+        animation-iteration-count: 4;
+    }
+    
+    @keyframes dayfly {
+        25% {margin-top: 100px; transition: rotate(-90deg);}
+        50% {margin-left: 75px;}
+        75% {transition: rotate(90deg); margin-left: 75px;}
+        100% {margin-top: 250px; margin-left: 75px;}
+    }
+    
+    .night {
+        animation-name: nightfly;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 4;
+    }
+    
+    @keyframes nightfly {
+        25% {margin-top: 100px; transition: rotate(90deg);}
+        50% {margin-left: 475px;}
+        75% {transition: rotate(-90deg); margin-left: 475px;}
+        100% {margin-top: 250px; margin-left: 475px;}
+    }
+
+}
